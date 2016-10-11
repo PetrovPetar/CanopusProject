@@ -16,6 +16,15 @@ function init() {
     function draw() {
         let ctx = document.getElementById('canvas').getContext('2d');
 
+        for (let row = 0; row < 8; row++) {
+            for (let col = 0; col < 8; col++) {
+                let x = 2 + col * 100;
+                let y = 2 + row * 100;
+                ctx.fillStyle="#00ff00";
+                ctx.fillRect(x, y, 96, 96);
+            }
+        }
+
         ctx.drawImage(img1, 0, 0);
         ctx.drawImage(img2, 0, 100)
     }
